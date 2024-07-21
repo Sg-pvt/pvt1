@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+/* Targeting WebKit-based browsers (Chrome, Safari, etc.) */
+/* Adjust these values to fit your design */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #e66db3;
+  /* White background */
+}
+
+/* Handle (the part you drag with the mouse) */
+::-webkit-scrollbar-thumb {
+  background-color: #1c00ff;
+  /* Yellow color */
+  /* border-radius: 6px; Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8373fb;
+  /* Lighter yellow on hover */
+}
+
+body {
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/bgd.png");
+  /* object-fit: contain; */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.paper {
+  background-position: center center;
+  /*  min-width: 800px; */
+  transform: rotateZ(6deg);
+  border-radius: 10px;
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: url("images/paperpurple.jpg");
+  background-size: 320px;
+}
+
+.polaroid {
+  background-image: url("./images/polaroid2.png");
+  background-size: 210px;
+  display: flex;
+  background-repeat: no-repeat;
+  justify-content: center;
+  /* border: 2px solid red; */
+  width: 205px;
+  height: 252px;
+  position: relative;
+  /* object-fit: cover; */
+}
+
+.polaroid img {
+  position: absolute;
+  z-index: -1;
+  width: 84%;
+  top: 27px;
+  left: 18px;
+  object-fit: cover;
+}
+
+.polaroid video {
+  position: absolute;
+  width: 84%;
+  top: 14px;
+  z-index: -1;
+  object-fit: cover;
+  filter: contrast(120%) brightness(85%);
+  left: 18px;
+}
+
+/* .paper.image p {
+  font-size: 30px;
+} */
+
+img {
+  max-height: 200px;
+  width: 100%;
+  user-select: none;
+}
+
+p {
+  font-family: "Zeyada";
+  /* font-size: 50px; */
+  color: rgb(255, 255, 255);
+  /* opacity: 0.75; */
+  user-select: none;
+
+  filter: drop-shadow(2px 1.5px 10px rgba(0, 0, 0, 0.5));
+}
+
+.endportion {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 8px;
+  width: 18px;
+  border-radius: 8px;
+  right: -5px;
+}
+
+.seekbarcontrols {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+.seekbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #a7a7a7;
+  font-family: "roboto";
+  width: 100%;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 2px solid white;
+  background-color: white;
+  height: 1px;
+  width: 0px;
+  border-radius: 8px;
+}
+
+.movingbar {
+  /* border: 2px solid rgb(142, 19, 19); */
+  border: 2px solid white;
+  width: 100%;
+  height: 5px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.hiddenoffset {
+  height: 5px;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  cursor: pointer;
+}
+
+.album {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 20px;
+  font-size: 30px;
+  gap: 15px;
+  color: #ffffff;
+}
+
+#rotate {
+  display: flex;
+  bottom: 18%;
+  right: 15%;
+  position: fixed;
+  animation: 8s linear 0s infinite alternate sun-rise;
+  justify-content: center;
+  align-items: end;
+  /* border: 2px solid red;   */
+  width: 230px;
+  height: 598px;
+  transition: all 1s;
+}
+
+#reveal {
+  background-image: url("./images/hangingpolaroid.png");
+  width: 100%;
+  height: 95%;
+  align-items: center;
+  justify-content: center;
+  background-size: 250px;
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  /* border: 2px solid green; */
+  display: flex;
+  position: relative;
+}
+
+#reveal img {
+  object-fit: contain;
+  position: absolute;
+  bottom: 5%;
+  z-index: -1;
+  cursor: pointer;
+}
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: rotate(-6deg)
+  }
+
+  to {
+    /* returns the sun to its default position */
+    transform: rotate(6deg);
+  }
+}
+
+.clickme {
+  position: absolute;
+
+  bottom: 19%;
+  width: 45%;
+  height: 13%;
+  cursor: pointer;
+}
+
+ul {
+  font-family: 'Zeyada';
+  font-size: 23px;
+  gap: 10px;
+  color: white;
+  list-style: none;
+  padding: 10px;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
