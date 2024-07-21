@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+    rel="stylesheet"
+  />
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Secret</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="rotate">
+      <div id="reveal">
+        <img src="./images/surprise.png" alt="" />
+        <div class="clickme"></div>
+      </div>
+    </div>
+    <div class="paper" style="background-image: none; box-shadow: none">
+      <div class="polaroid">
+        <p
+          style="
+            position: absolute;
+            bottom: 5px;
+            color: black;
+            font-weight: 600;
+          "
+        >
+          I was enchanted to meet you💙
+        </p>
+        <img src="./images/6.jpeg" style="object-fit: fill" alt="" />
+      </div>
+    </div>
+    <div class="paper" style="background-image: none; box-shadow: none">
+      <div class="polaroid">
+        <video>
+          <source src="./images/5.mp4" />
+        </video>
+        <p
+          style="
+            position: absolute;
+            bottom: 5px;
+            color: black;
+            font-weight: 600;
+          "
+        >
+          Click to Play ✨
+        </p>
+      </div>
+    </div>
+    <div class="paper" style="background-image: none; box-shadow: none">
+      <div class="polaroid">
+        <p style="position: absolute; bottom: 5px; color: black; filter: none">
+          🩵
+        </p>
+        <img style="top: 18px; width: 90%" src="./images/4.png" alt="" />
+      </div>
+    </div>
+    <div class="paper" style="background-image: none; box-shadow: none">
+      <div class="polaroid">
+        <p
+        style="
+          position: absolute;
+          width: full;
+          bottom: 5px;
+          color: black;
+          font-weight: 600; filter: none
+        "
+      >
+      💌
+      </p>
+        <img src="./images/3.jpeg" style="object-fit: fill" alt="" />
+      </div>
+      
+      <!-- <img src="./images/heart.png" alt="" style="width: 30%; position: absolute; bottom: 50px;"> -->
+    </div>
+
+    <div class="paper" style="background-image: none; box-shadow: none">
+      <div class="polaroid" style="background-size: 203px">
+        <img src="./images/2.png" />
+        <p
+        style="
+          position: absolute;
+          width: full;
+          bottom: 12px;
+          color: black;
+          font-weight: 600; filter: none
+        "
+      >
+      i found her 
+      </p>
+      </div>
+    </div>
+    <div class="paper" style="background-image: none; box-shadow: none">
+      <div class="polaroid">
+        <p
+          style="
+            position: absolute;
+            bottom: 5px;
+            color: black;
+            font-weight: 600;
+          "
+        >
+          G E O R G I A
+        </p>
+        <img style="top: 15px" src="./images/1.jpeg" alt="" />
+      </div>
+    </div>
+    <div
+      class="paper"
+      style="
+        font-family: 'Sacramento';
+        width: 220px;
+        height: 287px;
+        padding: 30px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="position: relative; display: flex; flex-flow: column; gap: 12px"
+      >
+        <div class="nowplaying" style="position: relative; z-index: -1">
+          <div
+            class="header"
+            style="
+              font-size: 30px;
+              font-weight: 600;
+              margin: 10px;
+              color: #ffffff;
+            "
+          >
+            Now Playing...
+          </div>
+          <div class="album">
+            <img
+              src="./images/albumart.jpeg"
+              style="width: 120px"
+              alt=""
+            />Until I found you
+          </div>
+        </div>
+
+        <div class="seekbarcontrols">
+          <button
+            id="play"
+            style="background: none; border: none; cursor: pointer"
+          >
+            <img
+              src="./images/seekbarplay.svg"
+              style="width: 30px; filter: invert(1)"
+              alt=""
+              srcset=""
+            />
+          </button>
+          <div class="seekbar">
+            <div class="movingbar">
+              <div class="circle">
+                <div class="endportion">
+                  <img src="./images/pixelheart.png" alt="" />
+                </div>
+              </div>
+              <div class="hiddenoffset"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="paper"
+      style="
+        display: flex;
+        flex-flow: column;
+        width: 260px;
+        height: 300px;
+        padding: 15px;
+        justify-content: center;
+      "
+    >
+      <div
+        style="font-family: 'Sacramento'; font-size: xx-large; font-weight: 700"
+      >
+        Instructions!!
+      </div>
+      <ul>
+        <li>📜You can drag and move me or the papers or almost anything you see with your cursor !!</li>
+        <li>Explore your way around💖</li>
+        <li>For support XD:</li>
+        <li>+91 9571377588</li>
+      </ul>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  </body>
+</html>
