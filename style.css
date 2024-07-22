@@ -250,3 +250,9 @@ ul {
   flex-flow: column;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    display: none;
+  }
+}
